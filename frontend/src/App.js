@@ -4,8 +4,11 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import CourseDetail from './pages/CourseDetail';
 import MyCourses from './pages/MyCourses';
+import Profile from './pages/Profile';
 import { connectWallet } from './utils/connectWallet';
 import { getContract } from './utils/contract';
+
+import { LanguageProvider } from './context/LanguageContext';
 
 function App() {
   const [account, setAccount] = useState("");
@@ -45,31 +48,35 @@ function App() {
         } else {
           setAccount("");
           setContract(null);
+          showToast("Wallet disconnected", "info");
         }
       });
     }
   }, []);
 
   return (
-    <Router>
-      <div className="app-container">
-        <Navbar account={account} onConnect={handleConnect} />
-        
-        <Routes>
-          <Route path="/" element={<Home contract={contract} account={account} showToast={showToast} />} />
-          <Route path="/course/:id" element={<CourseDetail contract={contract} account={account} showToast={showToast} />} />
-          <Route path="/my-courses" element={<MyCourses contract={contract} account={account} />} />
-        </Routes>
+    <LanguageProvider>
+      <Router>
+        <div className="app-container">
+          <Navbar account={account} onConnect={handleConnect} />
+          
+          <Routes>
+            <Route path="/" element={<Home contract={contract} account={account} showToast={showToast} />} />
+            <Route path="/course/:id" element={<CourseDetail contract={contract} account={account} showToast={showToast} />} />
+            <Route path="/my-courses" element={<MyCourses contract={contract} account={account} />} />
+            <Route path="/profile" element={<Profile account={account} showToast={showToast} />} />
+          </Routes>
 
-        {toast && (
-          <div className="toast-container">
-            <div className={`toast ${toast.type}`}>
-              {toast.message}
+          {toast && (
+            <div className="toast-container">
+              <div className={`toast ${toast.type}`}>
+                {toast.message}
+              </div>
             </div>
-          </div>
-        )}
-      </div>
-    </Router>
+          )}
+        </div>
+      </Router>
+    </LanguageProvider>
   );
 }
 
