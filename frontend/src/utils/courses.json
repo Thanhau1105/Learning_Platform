@@ -10,7 +10,8 @@
     "rating": 4.8,
     "duration": "12 hours",
     "instructor": "Vitalik Smith",
-    "studentsEnrolled": 12450
+    "studentsEnrolled": 12450,
+    "tags": ["solidity", "ethereum", "smart contract", "hợp đồng thông minh", "blockchain", "lập trình", "web3", "crypto", "decentralized", "evm"]
   },
   {
     "id": 2,
@@ -23,7 +24,8 @@
     "rating": 4.9,
     "duration": "8 hours",
     "instructor": "Alice Nakamoto",
-    "studentsEnrolled": 8300
+    "studentsEnrolled": 8300,
+    "tags": ["security", "bảo mật", "audit", "reentrancy", "hack", "vulnerability", "smart contract", "ethereum", "attack", "protection"]
   },
   {
     "id": 3,
@@ -36,7 +38,8 @@
     "rating": 4.7,
     "duration": "15 hours",
     "instructor": "Bob DeFi",
-    "studentsEnrolled": 5200
+    "studentsEnrolled": 5200,
+    "tags": ["defi", "decentralized finance", "tài chính phi tập trung", "dex", "swap", "uniswap", "lending", "flash loan", "yield", "liquidity"]
   },
   {
     "id": 4,
@@ -49,7 +52,8 @@
     "rating": 4.9,
     "duration": "20 hours",
     "instructor": "Satoshi Dev",
-    "studentsEnrolled": 15000
+    "studentsEnrolled": 15000,
+    "tags": ["react", "hardhat", "dapp", "fullstack", "javascript", "frontend", "backend", "web3", "lập trình", "ethers", "metamask"]
   },
   {
     "id": 5,
@@ -62,7 +66,8 @@
     "rating": 4.9,
     "duration": "10 hours",
     "instructor": "Alan Turing",
-    "studentsEnrolled": 22000
+    "studentsEnrolled": 22000,
+    "tags": ["ai", "artificial intelligence", "trí tuệ nhân tạo", "llm", "chatgpt", "gpt", "prompt", "rag", "generative", "machine learning", "deep learning"]
   },
   {
     "id": 6,
@@ -75,7 +80,8 @@
     "rating": 4.6,
     "duration": "6 hours",
     "instructor": "Elena UI",
-    "studentsEnrolled": 9500
+    "studentsEnrolled": 9500,
+    "tags": ["ui", "ux", "thiết kế", "design", "figma", "glassmorphism", "interface", "user experience", "web3", "prototype", "wireframe"]
   },
   {
     "id": 7,
@@ -88,7 +94,8 @@
     "rating": 4.5,
     "duration": "5 hours",
     "instructor": "Marketing Guru",
-    "studentsEnrolled": 4300
+    "studentsEnrolled": 4300,
+    "tags": ["marketing", "community", "discord", "twitter", "social media", "token launch", "crypto marketing", "growth", "branding", "tiếp thị"]
   },
   {
     "id": 8,
@@ -101,7 +108,8 @@
     "rating": 5.0,
     "duration": "18 hours",
     "instructor": "Dr. ZK",
-    "studentsEnrolled": 3100
+    "studentsEnrolled": 3100,
+    "tags": ["zk", "zero knowledge", "zkrollup", "zk-snark", "privacy", "scaling", "layer2", "l2", "ethereum", "mật mã học", "cryptography"]
   },
   {
     "id": 9,
@@ -114,7 +122,8 @@
     "rating": 4.8,
     "duration": "22 hours",
     "instructor": "Rusty Dev",
-    "studentsEnrolled": 11200
+    "studentsEnrolled": 11200,
+    "tags": ["rust", "solana", "smart contract", "sol", "anchor", "lập trình", "systems programming", "wasm", "blockchain", "fast"]
   },
   {
     "id": 10,
@@ -127,7 +136,8 @@
     "rating": 4.7,
     "duration": "25 hours",
     "instructor": "Andrew Data",
-    "studentsEnrolled": 28000
+    "studentsEnrolled": 28000,
+    "tags": ["machine learning", "học máy", "python", "tensorflow", "keras", "pandas", "numpy", "data science", "neural network", "deep learning", "ai", "model"]
   },
   {
     "id": 11,
@@ -140,7 +150,8 @@
     "rating": 4.6,
     "duration": "4 hours",
     "instructor": "CSS Wizard",
-    "studentsEnrolled": 7600
+    "studentsEnrolled": 7600,
+    "tags": ["css", "animation", "hoạt ảnh", "frontend", "web design", "keyframes", "transition", "hover", "motion", "html", "responsive"]
   },
   {
     "id": 12,
@@ -153,7 +164,8 @@
     "rating": 4.9,
     "duration": "14 hours",
     "instructor": "NFT Creator",
-    "studentsEnrolled": 18500
+    "studentsEnrolled": 18500,
+    "tags": ["nft", "non-fungible token", "marketplace", "mint", "opensea", "next.js", "solidity", "erc721", "digital art", "collectible"]
   },
   {
     "id": 13,
@@ -166,7 +178,8 @@
     "rating": 4.7,
     "duration": "30 hours",
     "instructor": "Game Studio",
-    "studentsEnrolled": 8900
+    "studentsEnrolled": 8900,
+    "tags": ["game", "gaming", "play to earn", "p2e", "unity", "gamefi", "metaverse", "nft game", "in-game", "web3 game", "trò chơi"]
   },
   {
     "id": 14,
@@ -179,7 +192,8 @@
     "rating": 4.8,
     "duration": "18 hours",
     "instructor": "Backend Pro",
-    "studentsEnrolled": 15200
+    "studentsEnrolled": 15200,
+    "tags": ["python", "backend", "fastapi", "api", "docker", "postgresql", "redis", "server", "lập trình", "microservice", "rest api"]
   },
   {
     "id": 15,
@@ -192,7 +206,8 @@
     "rating": 4.5,
     "duration": "8 hours",
     "instructor": "Econ Crypto",
-    "studentsEnrolled": 4100
+    "studentsEnrolled": 4100,
+    "tags": ["tokenomics", "token", "economics", "kinh tế học", "ico", "ido", "whitepaper", "crypto", "supply", "inflation", "utility token"]
   },
   {
     "id": 16,
@@ -205,7 +220,8 @@
     "rating": 4.6,
     "duration": "24 hours",
     "instructor": "3D Master",
-    "studentsEnrolled": 3500
+    "studentsEnrolled": 3500,
+    "tags": ["metaverse", "3d", "blender", "webgl", "vr", "ar", "virtual reality", "thiết kế 3d", "decentraland", "sandbox", "immersive"]
   },
   {
     "id": 17,
@@ -218,7 +234,8 @@
     "rating": 4.4,
     "duration": "12 hours",
     "instructor": "Trader Joe",
-    "studentsEnrolled": 21000
+    "studentsEnrolled": 21000,
+    "tags": ["trading", "crypto trading", "giao dịch", "technical analysis", "chart", "candlestick", "risk management", "bitcoin", "altcoin", "market", "đầu tư"]
   },
   {
     "id": 18,
@@ -231,7 +248,8 @@
     "rating": 4.9,
     "duration": "6 hours",
     "instructor": "VC Partner",
-    "studentsEnrolled": 2800
+    "studentsEnrolled": 2800,
+    "tags": ["venture capital", "vc", "startup", "fundraising", "gọi vốn", "whitepaper", "pitch deck", "investor", "seed round", "business", "kinh doanh"]
   },
   {
     "id": 19,
@@ -244,7 +262,8 @@
     "rating": 4.7,
     "duration": "7 hours",
     "instructor": "Storage Node",
-    "studentsEnrolled": 6700
+    "studentsEnrolled": 6700,
+    "tags": ["ipfs", "arweave", "decentralized storage", "lưu trữ phi tập trung", "filecoin", "pinata", "hosting", "nft storage", "permanent storage", "web3"]
   },
   {
     "id": 20,
@@ -257,6 +276,7 @@
     "rating": 4.8,
     "duration": "16 hours",
     "instructor": "Gopher Dev",
-    "studentsEnrolled": 9200
+    "studentsEnrolled": 9200,
+    "tags": ["golang", "go", "geth", "blockchain node", "ethereum client", "server", "lập trình", "backend", "high performance", "concurrency"]
   }
 ]

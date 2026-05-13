@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import CourseCard from '../components/CourseCard';
 import PaymentModal from '../components/PaymentModal';
+import SmartSearch from '../components/SmartSearch';
 import coursesData from '../utils/courses.json';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -9,10 +10,13 @@ const Home = ({ contract, account, showToast }) => {
   const { t } = useLanguage();
   const [purchasedIds, setPurchasedIds] = useState([]);
   const [loadingId, setLoadingId] = useState(null);
-  const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('All');
   const [paymentModalOpen, setPaymentModalOpen] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState(null);
+
+  // AI Search state
+  const [searchResults, setSearchResults] = useState(null); // null = no search active
+  const [searchQuery, setSearchQuery] = useState('');
 
   const categories = ['All', ...new Set(coursesData.map(c => c.category))];
 
@@ -76,11 +80,14 @@ const Home = ({ contract, account, showToast }) => {
     }, 2000);
   };
 
-  const filteredCourses = coursesData.filter(course => {
-    const matchesSearch = course.title.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = activeCategory === 'All' || course.category === activeCategory;
-    return matchesSearch && matchesCategory;
-  });
+  // If AI search is active, use those results; otherwise filter by category
+  const displayedCourses = (() => {
+    let base = searchResults !== null ? searchResults : coursesData;
+    if (activeCategory !== 'All') {
+      base = base.filter(c => c.category === activeCategory);
+    }
+    return base;
+  })();
 
   return (
     <div>
@@ -88,18 +95,12 @@ const Home = ({ contract, account, showToast }) => {
         <h1 className="hero-title">{t("home_hero_title")}</h1>
         <p className="hero-subtitle">{t("home_hero_subtitle")}</p>
       </div>
-      
+
       <div className="discovery-tools">
-        <div className="search-bar">
-          <span className="search-icon">🔍</span>
-          <input
-            type="text"
-            className="search-input"
-            placeholder={t("home_search_placeholder")}
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-        </div>
+        <SmartSearch
+          onResultsChange={setSearchResults}
+          onQueryChange={setSearchQuery}
+        />
 
         <div className="category-filters">
           {categories.map(cat => (
@@ -113,9 +114,16 @@ const Home = ({ contract, account, showToast }) => {
           ))}
         </div>
       </div>
-      
+
+      {/* Search Result Summary */}
+      {searchQuery.trim().length >= 2 && searchResults !== null && (
+        <div className="search-result-info">
+          ✨ Found <strong>{displayedCourses.length}</strong> AI-matched result{displayedCourses.length !== 1 ? 's' : ''} for "<em>{searchQuery}</em>"
+        </div>
+      )}
+
       <div className="courses-grid">
-        {filteredCourses.map(course => {
+        {displayedCourses.map(course => {
           const fiatPurchases = JSON.parse(localStorage.getItem(`fiat_${account}`) || "[]");
           const isPurchased = purchasedIds.includes(course.id) || fiatPurchases.includes(course.id);
           return (
@@ -128,8 +136,8 @@ const Home = ({ contract, account, showToast }) => {
             />
           );
         })}
-        {filteredCourses.length === 0 && (
-          <div style={{gridColumn: '1 / -1', textAlign: 'center', padding: '40px', color: 'var(--text-muted)'}}>
+        {displayedCourses.length === 0 && (
+          <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '40px', color: 'var(--text-muted)' }}>
             {t("home_no_courses")}
           </div>
         )}
@@ -138,7 +146,7 @@ const Home = ({ contract, account, showToast }) => {
       {paymentModalOpen && selectedCourse && (
         <PaymentModal
           course={selectedCourse}
-          onClose={() => { if(!loadingId) setPaymentModalOpen(false); }}
+          onClose={() => { if (!loadingId) setPaymentModalOpen(false); }}
           onPayWeb3={executeWeb3Payment}
           onPayFiat={executeFiatPayment}
           loading={loadingId === selectedCourse.id}
