@@ -34,7 +34,7 @@ Tài liệu này sẽ hướng dẫn bạn chi tiết cách khởi chạy toàn 
    ```bash
    npx hardhat ignition deploy ignition/modules/Course.js --network ganache
    ```
-5. Khi hệ thống hỏi "Confirm deploy to network ganache (1337)?", hãy gõ `y` và nhấn Enter.
+5. Khi hệ thống hỏi "Confirm deploy to network ganache (5777)?", hãy gõ `y` và nhấn Enter.
 6. Khi deploy thành công, bạn sẽ nhận được một địa chỉ (ví dụ: `0xa843a...`). **Hãy copy địa chỉ này**.
 
 ---
@@ -73,7 +73,7 @@ Tài liệu này sẽ hướng dẫn bạn chi tiết cách khởi chạy toàn 
 5. Điền các thông tin sau:
    - **Tên mạng (Network name):** `Ganache Local`
    - **URL RPC mới (New RPC URL):** `http://127.0.0.1:7545`
-   - **Mã chuỗi (Chain ID):** `1337`
+   - **Mã chuỗi (Chain ID):** `5777`
    - **Ký hiệu tiền tệ (Currency symbol):** `ETH`
 6. Nhấn **Lưu (Save)**. MetaMask lúc này sẽ chuyển sang mạng Ganache.
 
