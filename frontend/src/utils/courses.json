@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to Solidity & Web3",
+    "description": "Learn the basics of smart contract development with Solidity and interact with the Ethereum blockchain.",
+    "priceEth": "0.01",
+    "image": "https://img.youtube.com/vi/M576WGiDBdQ/maxresdefault.jpg",
+    "videoUrl": "https://www.youtube.com/embed/M576WGiDBdQ"
+  },
+  {
+    "id": 2,
+    "title": "Advanced Smart Contract Security",
+    "description": "Master the art of securing your smart contracts. Learn about reentrancy, integer overflow, and more.",
+    "priceEth": "0.015",
+    "image": "https://img.youtube.com/vi/bEVKSiaAQxk/maxresdefault.jpg",
+    "videoUrl": "https://www.youtube.com/embed/bEVKSiaAQxk"
+  },
+  {
+    "id": 3,
+    "title": "DeFi Development Masterclass",
+    "description": "Build decentralized finance applications. Learn how DEXes, lending protocols, and flash loans work.",
+    "priceEth": "0.02",
+    "image": "https://img.youtube.com/vi/kCqsVsEmmzI/maxresdefault.jpg",
+    "videoUrl": "https://www.youtube.com/embed/kCqsVsEmmzI"
+  },
+  {
+    "id": 4,
+    "title": "Fullstack dApp with React and Hardhat",
+    "description": "Connect your frontend React application to a Hardhat backend. End-to-end dApp development.",
+    "priceEth": "0.025",
+    "image": "https://img.youtube.com/vi/pZNQ0PSdp2c/maxresdefault.jpg",
+    "videoUrl": "https://www.youtube.com/embed/pZNQ0PSdp2c"
+  }
+]
