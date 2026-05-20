@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import CourseDetail from './pages/CourseDetail';
 import MyCourses from './pages/MyCourses';
 import Profile from './pages/Profile';
+import AIAssistant from './components/AIAssistant';
 import { connectWallet } from './utils/connectWallet';
 import { getContract } from './utils/contract';
 
@@ -64,8 +65,11 @@ function App() {
             <Route path="/" element={<Home contract={contract} account={account} showToast={showToast} />} />
             <Route path="/course/:id" element={<CourseDetail contract={contract} account={account} showToast={showToast} />} />
             <Route path="/my-courses" element={<MyCourses contract={contract} account={account} />} />
-            <Route path="/profile" element={<Profile account={account} showToast={showToast} />} />
+            <Route path="/profile" element={<Profile contract={contract} account={account} showToast={showToast} />} />
           </Routes>
+
+          {/* Global Floating AI Learning Assistant Chatbot */}
+          <AIAssistant />
 
           {toast && (
             <div className="toast-container">
